@@ -35,33 +35,48 @@ public class Calculadora extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        botonMultiplicar1 = new javax.swing.JButton();
         panel = new javax.swing.JPanel();
         botonC = new javax.swing.JButton();
         botonRaiz = new javax.swing.JButton();
         botonDivision = new javax.swing.JButton();
         botonCE = new javax.swing.JButton();
+        botonPotencian = new javax.swing.JButton();
         jButton35 = new javax.swing.JButton();
         jButton28 = new javax.swing.JButton();
         jButton29 = new javax.swing.JButton();
         botonMultiplicar = new javax.swing.JButton();
-        jButton32 = new javax.swing.JButton();
-        jButton33 = new javax.swing.JButton();
+        botonPorcentaje = new javax.swing.JButton();
         jButton34 = new javax.swing.JButton();
+        jButton33 = new javax.swing.JButton();
+        jButton32 = new javax.swing.JButton();
         botonRestar = new javax.swing.JButton();
-        jButton37 = new javax.swing.JButton();
-        jButton40 = new javax.swing.JButton();
+        botonInversa = new javax.swing.JButton();
         jButton38 = new javax.swing.JButton();
+        jButton40 = new javax.swing.JButton();
+        jButton37 = new javax.swing.JButton();
         botonSumar = new javax.swing.JButton();
+        botonPotenciaCuadrado = new javax.swing.JButton();
         jButton41 = new javax.swing.JButton();
         jButton42 = new javax.swing.JButton();
         botonPunto = new javax.swing.JButton();
         botonIgual = new javax.swing.JButton();
+        botonPotenciaCubica = new javax.swing.JButton();
+        botonRaizCubica = new javax.swing.JButton();
         etiquetaNumeros = new javax.swing.JLabel();
         etiquetaMuestra = new javax.swing.JLabel();
 
+        botonMultiplicar1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botonMultiplicar1.setText("X");
+        botonMultiplicar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonMultiplicar1ActionPerformed(evt);
+            }
+        });
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panel.setLayout(new java.awt.GridLayout(5, 4));
+        panel.setLayout(new java.awt.GridLayout(6, 3));
 
         botonC.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         botonC.setText("C");
@@ -98,6 +113,15 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
         panel.add(botonCE);
+
+        botonPotencian.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botonPotencian.setText("x^n");
+        botonPotencian.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonPotencianActionPerformed(evt);
+            }
+        });
+        panel.add(botonPotencian);
 
         jButton35.setBackground(new java.awt.Color(204, 204, 204));
         jButton35.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -138,25 +162,14 @@ public class Calculadora extends javax.swing.JFrame {
         });
         panel.add(botonMultiplicar);
 
-        jButton32.setBackground(new java.awt.Color(204, 204, 204));
-        jButton32.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton32.setText("4");
-        jButton32.addActionListener(new java.awt.event.ActionListener() {
+        botonPorcentaje.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botonPorcentaje.setText("%");
+        botonPorcentaje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton32ActionPerformed(evt);
+                botonPorcentajeActionPerformed(evt);
             }
         });
-        panel.add(jButton32);
-
-        jButton33.setBackground(new java.awt.Color(204, 204, 204));
-        jButton33.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton33.setText("5");
-        jButton33.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton33ActionPerformed(evt);
-            }
-        });
-        panel.add(jButton33);
+        panel.add(botonPorcentaje);
 
         jButton34.setBackground(new java.awt.Color(204, 204, 204));
         jButton34.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -168,6 +181,26 @@ public class Calculadora extends javax.swing.JFrame {
         });
         panel.add(jButton34);
 
+        jButton33.setBackground(new java.awt.Color(204, 204, 204));
+        jButton33.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton33.setText("5");
+        jButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton33ActionPerformed(evt);
+            }
+        });
+        panel.add(jButton33);
+
+        jButton32.setBackground(new java.awt.Color(204, 204, 204));
+        jButton32.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton32.setText("4");
+        jButton32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton32ActionPerformed(evt);
+            }
+        });
+        panel.add(jButton32);
+
         botonRestar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         botonRestar.setText("-");
         botonRestar.addActionListener(new java.awt.event.ActionListener() {
@@ -177,25 +210,14 @@ public class Calculadora extends javax.swing.JFrame {
         });
         panel.add(botonRestar);
 
-        jButton37.setBackground(new java.awt.Color(204, 204, 204));
-        jButton37.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton37.setText("1");
-        jButton37.addActionListener(new java.awt.event.ActionListener() {
+        botonInversa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botonInversa.setText("1/x");
+        botonInversa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton37ActionPerformed(evt);
+                botonInversaActionPerformed(evt);
             }
         });
-        panel.add(jButton37);
-
-        jButton40.setBackground(new java.awt.Color(204, 204, 204));
-        jButton40.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton40.setText("2");
-        jButton40.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton40ActionPerformed(evt);
-            }
-        });
-        panel.add(jButton40);
+        panel.add(botonInversa);
 
         jButton38.setBackground(new java.awt.Color(204, 204, 204));
         jButton38.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -207,6 +229,26 @@ public class Calculadora extends javax.swing.JFrame {
         });
         panel.add(jButton38);
 
+        jButton40.setBackground(new java.awt.Color(204, 204, 204));
+        jButton40.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton40.setText("2");
+        jButton40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton40ActionPerformed(evt);
+            }
+        });
+        panel.add(jButton40);
+
+        jButton37.setBackground(new java.awt.Color(204, 204, 204));
+        jButton37.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton37.setText("1");
+        jButton37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton37ActionPerformed(evt);
+            }
+        });
+        panel.add(jButton37);
+
         botonSumar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         botonSumar.setText("+");
         botonSumar.addActionListener(new java.awt.event.ActionListener() {
@@ -215,6 +257,15 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
         panel.add(botonSumar);
+
+        botonPotenciaCuadrado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botonPotenciaCuadrado.setText("x^2");
+        botonPotenciaCuadrado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonPotenciaCuadradoActionPerformed(evt);
+            }
+        });
+        panel.add(botonPotenciaCuadrado);
 
         jButton41.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton41.setText("+/-");
@@ -252,6 +303,24 @@ public class Calculadora extends javax.swing.JFrame {
         });
         panel.add(botonIgual);
 
+        botonPotenciaCubica.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botonPotenciaCubica.setText("x^3");
+        botonPotenciaCubica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonPotenciaCubicaActionPerformed(evt);
+            }
+        });
+        panel.add(botonPotenciaCubica);
+
+        botonRaizCubica.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botonRaizCubica.setText("3√");
+        botonRaizCubica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonRaizCubicaActionPerformed(evt);
+            }
+        });
+        panel.add(botonRaizCubica);
+
         etiquetaNumeros.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         etiquetaNumeros.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         etiquetaNumeros.setText("0");
@@ -263,13 +332,13 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(etiquetaMuestra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(etiquetaNumeros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(etiquetaNumeros, javax.swing.GroupLayout.DEFAULT_SIZE, 353, Short.MAX_VALUE))
                 .addContainerGap())
+            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -524,6 +593,34 @@ public class Calculadora extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_botonCEActionPerformed
 
+    private void botonMultiplicar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMultiplicar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonMultiplicar1ActionPerformed
+
+    private void botonPotencianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPotencianActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonPotencianActionPerformed
+
+    private void botonPorcentajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPorcentajeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonPorcentajeActionPerformed
+
+    private void botonInversaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInversaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonInversaActionPerformed
+
+    private void botonPotenciaCuadradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPotenciaCuadradoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonPotenciaCuadradoActionPerformed
+
+    private void botonPotenciaCubicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPotenciaCubicaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonPotenciaCubicaActionPerformed
+
+    private void botonRaizCubicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRaizCubicaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonRaizCubicaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -567,9 +664,16 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JButton botonCE;
     private javax.swing.JButton botonDivision;
     private javax.swing.JButton botonIgual;
+    private javax.swing.JButton botonInversa;
     private javax.swing.JButton botonMultiplicar;
+    private javax.swing.JButton botonMultiplicar1;
+    private javax.swing.JButton botonPorcentaje;
+    private javax.swing.JButton botonPotenciaCuadrado;
+    private javax.swing.JButton botonPotenciaCubica;
+    private javax.swing.JButton botonPotencian;
     private javax.swing.JButton botonPunto;
     private javax.swing.JButton botonRaiz;
+    private javax.swing.JButton botonRaizCubica;
     private javax.swing.JButton botonRestar;
     private javax.swing.JButton botonSumar;
     private javax.swing.JLabel etiquetaMuestra;
