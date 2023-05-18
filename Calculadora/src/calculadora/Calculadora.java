@@ -623,6 +623,17 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void botonPotenciaCuadradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPotenciaCuadradoActionPerformed
         // TODO add your handling code here:
+        if(activado == true){
+            primerNumero = Double.parseDouble(cadenaNumeros);
+            etiquetaMuestra.setText(cadenaNumeros + " x ");
+            cadenaNumeros = "";
+            resultado = primerNumero * primerNumero;;
+            etiquetaNumeros.setText(String.format("% .2f",resultado));
+            cadenaNumeros = String.valueOf(resultado);
+            operacion = "nula";
+            activado = false;
+        }
+      
     }//GEN-LAST:event_botonPotenciaCuadradoActionPerformed
 
     private void botonPotenciaCubicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPotenciaCubicaActionPerformed
