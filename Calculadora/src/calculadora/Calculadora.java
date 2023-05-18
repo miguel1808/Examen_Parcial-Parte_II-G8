@@ -313,8 +313,9 @@ public class Calculadora extends javax.swing.JFrame {
         });
         panel.add(botonPotenciaCubica);
 
-        botonRaizCubica.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        botonRaizCubica.setText("3√");
+        botonRaizCubica.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        botonRaizCubica.setText("∛");
+        botonRaizCubica.setToolTipText("");
         botonRaizCubica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonRaizCubicaActionPerformed(evt);
@@ -669,6 +670,19 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void botonRaizCubicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRaizCubicaActionPerformed
         // TODO add your handling code here:
+         // Aquí se va a añadir el código a modificar 
+        // KATHERINE CELINE AMBROCIO MILLA (18200324)
+
+        primerNumero = Double.parseDouble(cadenaNumeros);
+        etiquetaMuestra.setText("sqrt("+cadenaNumeros+")");
+
+       //CBRT: En este caso empleamos el método 'cbrt para hallar la raíz cúbica
+
+        resultado = Math.cbrt(primerNumero);
+        etiquetaNumeros.setText(String.format("%.2f", resultado));
+
+        cadenaNumeros = String.valueOf(resultado); //CAMBIO:convertimos el valor a cadena
+ 
     }//GEN-LAST:event_botonRaizCubicaActionPerformed
 
     /**
