@@ -655,6 +655,16 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void botonPotenciaCubicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPotenciaCubicaActionPerformed
         // TODO add your handling code here:
+        if(cadenaNumeros==null || "".equals(cadenaNumeros)){
+            return;
+        }
+        if(activado==true){
+            primerNumero = Double.parseDouble(cadenaNumeros);
+            etiquetaMuestra.setText(cadenaNumeros + " ^ 3 ");
+            resultado=Math.pow(primerNumero, 3);
+            etiquetaNumeros.setText(String.format("% .2f",resultado));
+            cadenaNumeros = String.valueOf(resultado);
+        }
     }//GEN-LAST:event_botonPotenciaCubicaActionPerformed
 
     private void botonRaizCubicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRaizCubicaActionPerformed

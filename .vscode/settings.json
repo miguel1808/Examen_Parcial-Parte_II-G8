@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "Libreria/JTattoo-1.6.13.jar"
+    ]
+}
