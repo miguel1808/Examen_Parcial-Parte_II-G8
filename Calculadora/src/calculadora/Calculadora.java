@@ -5,6 +5,7 @@
  */
 package calculadora;
 
+import java.text.DecimalFormat;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -606,7 +607,18 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonPorcentajeActionPerformed
 
     private void botonInversaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInversaActionPerformed
-        // TODO add your handling code here:
+        if (activado) {
+            double primernumero = Double.parseDouble(etiquetaNumeros.getText());
+            if (primernumero == 0) {
+                etiquetaMuestra.setText("Error: División por cero");
+                etiquetaNumeros.setText("0");
+            } else {
+                double resultadoInversa = 1 / primernumero;
+                DecimalFormat formato = new DecimalFormat("#.########");
+                String resultadoFormateado = formato.format(resultadoInversa);
+                etiquetaNumeros.setText(resultadoFormateado);
+            }
+        }
     }//GEN-LAST:event_botonInversaActionPerformed
 
     private void botonPotenciaCuadradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPotenciaCuadradoActionPerformed
