@@ -505,6 +505,14 @@ public class Calculadora extends javax.swing.JFrame {
                 operacion = "nula";
             }
         }
+        else if(operacion.equals("porcentaje")){
+            segundoNumero = Double.parseDouble(cadenaNumeros);
+            resultado = primerNumero * segundoNumero / 100;
+            etiquetaNumeros.setText(String.format("% .2f",resultado));
+            cadenaNumeros = String.valueOf(resultado);
+            operacion = "nula";
+        }
+
         
         etiquetaMuestra.setText("");
         activado = true;
@@ -604,6 +612,15 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void botonPorcentajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPorcentajeActionPerformed
         // TODO add your handling code here:
+        // AQUI AÑADIREMOS EL CODIGO A MODIFICAR
+        // RAMOS  RIVAS KEVIN KEYLER
+        if (activado) {
+            primerNumero = Double.parseDouble(cadenaNumeros);
+            etiquetaMuestra.setText(cadenaNumeros + "%");
+            cadenaNumeros = "";
+            operacion = "porcentaje";
+            activado = false;
+        }
     }//GEN-LAST:event_botonPorcentajeActionPerformed
 
     private void botonInversaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInversaActionPerformed
@@ -625,7 +642,7 @@ public class Calculadora extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(activado == true){
             primerNumero = Double.parseDouble(cadenaNumeros);
-            etiquetaMuestra.setText(cadenaNumeros + " x ");
+            etiquetaMuestra.setText(cadenaNumeros + " ^ 2 ");
             cadenaNumeros = "";
             resultado = primerNumero * primerNumero;;
             etiquetaNumeros.setText(String.format("% .2f",resultado));
